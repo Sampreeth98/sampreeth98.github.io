@@ -11,6 +11,55 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+	    <style>
+        /* Common styles */
+        .image-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-column a.image {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .inner {
+            flex: 2;
+            padding-left: 20px;
+        }
+
+        ul {
+            column-count: 2;
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            padding-left: 20px;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 1200px) {
+            .features article {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-column {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .image-column a.image img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain; /* Adjust object-fit as needed */
+            }
+            .inner {
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+    </style>
 	<body class="is-preload">
 
 		<!-- Header -->
